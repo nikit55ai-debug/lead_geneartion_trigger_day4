@@ -15,6 +15,4 @@ jobs:
           node-version: "20"
           cache: "npm"
       - run: npm ci
-      - run: npx trigger.dev@latest deploy
-        env:
-          TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_ACCESS_TOKEN }}
+      - run: npx trigger.dev@latest deploy --access-token ${{ secrets.TRIGGER_ACCESS_TOKEN }}
